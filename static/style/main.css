@@ -1,0 +1,314 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: Tahoma;
+}
+
+.header {
+	height: 55px;
+	text-align: center;
+	line-height: 55px;
+
+}
+
+.location {
+	position: relative;
+	display: inline-block;
+	left: 100px;
+	color: #4E4E54;
+	font-size: 15px;
+	line-height: 55px;
+}
+
+.logo {
+	width: 19px;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	line-height: 55px;
+}
+
+.btn-white {
+	color: #8D0ED8;
+	border-color: #8D0ED8;
+	border-radius: 16.07px;
+}
+
+.btn-purple {
+	background-color: #8D0ED8;
+	color: white;
+	border-radius: 16.07px;
+}
+
+.btn-wrap {
+	display: inline-block;
+	height: 55px;
+	margin-right: 20px;
+}
+
+.sign-in {
+	font-size: 13px;
+	vertical-align: center;
+}
+
+.btn-purple:hover {
+	color: #8D0ED8;
+	background-color: white;
+	border-color: #8D0ED8;
+}
+
+.btn {
+	padding: 5px 10px;
+}
+
+.starred-post {
+	font-size: 13px;
+}
+
+.btn-white:hover {
+	color: white;
+	background-color: #8D0ED8;
+}
+
+.menu-bar {
+	width: 100%;
+	height: 55px;
+	background-color: #DEDCE0;
+	position: relative;
+}
+
+.menu {
+	display: inline-block;
+	line-height: 55px;
+	padding: 0 15px;
+	color: #676767;
+}
+
+.menu:first-of-type {
+	margin-left: 10px;
+}
+
+.menu.highlighted {
+	background-color: #B3B3B3;
+}
+
+.menu:hover {
+	background-color: #B3B3B3;
+	color: #676767;
+	text-decoration: none;
+}
+
+.search {
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	padding: 4px 5px;
+	font-size: 12px;
+	color: #67676B;
+	border-radius: 2.9px;
+	border: solid 1px #707070;
+	background-image: url('../img/search.svg');
+	background-position: 117px 6px;
+	background-repeat: no-repeat;
+	background-size: 12px 12px;
+}
+
+.search:focus, 
+.search:active,
+.category-search input:focus {
+	outline: none;
+	border-color: #8D0ED8;
+	outline-color: #8D0ED8;
+}
+
+.side-bar {
+	display: inline-block;
+	padding: 25px 25px;
+	border-right: solid 1px #CCCCCC;
+	position: relative;
+	height: 100%;
+	float: left;
+	width: 20%;
+}
+
+.category {
+	font-size: 18px;
+}
+
+.category-search {
+	margin: 20px 0;
+}
+
+.search-name {
+	color: #4E4E54;
+	margin-top: 10px;
+	margin-bottom: 2px;	
+	font-size: 12px;
+}
+
+.category-search input {
+	padding: 4px 5px;
+	font-size: 12px;
+	color: #67676B;
+	border-radius: 2.9px;
+	border: solid 1.5px #707070;
+}
+
+.search-btn-wrap {
+	text-align: center;
+}
+
+.search-btn {
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 13px;
+
+}
+
+.filter-block {
+	margin-top: 20px;
+	border-top: solid 1px #CCCCCC;
+	padding-top: 15px;
+	font-size: 12px;
+}
+
+.filter-block>div{
+	font-size: 10px;
+}
+
+.filter-title {
+	margin-top: 20px;
+}
+
+.filter-block input {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.filter-block span {
+	color: #4E4E54;
+
+}
+
+.main-container {
+	padding: 30px 40px;
+	float: left;
+	width: 80%;
+}
+
+.main-container p {
+	color: #4E4E54;
+}
+
+.keyword-purple {
+	color: #8D0ED8;
+}
+
+.keyword-light-purple {
+	color: #BFA2D1;
+}
+
+.page-sort-conatiner {
+	margin-top: 30px;
+	margin-right: 30px;
+	width: 100%;
+	padding-bottom: 8px;
+	border-bottom: solid 1px #CCCCCC;
+}
+
+.page-number-container {
+	display: inline-block;
+	vertical-align: bottom;
+	line-height: 30px;
+}
+
+.page-number-container img {
+	display: inline-block;
+	width: 15px;
+}
+
+.page-number {
+	color: #4E4E4E;
+	font-size: 11px;
+}
+
+.page-number:not(:first-of-type) {
+	margin-left: 6px;
+}
+
+.sort-by {
+	display: inline-block;
+	font-size: 11px;
+}
+
+.sort-category {
+	border: solid 1px #CCCCCC;
+	padding: 5px 10px;
+	display: inline-block;
+	font-size: 13px;
+}
+
+.postings .fa-star-o {
+	font-size: 16px;
+	margin-right: 5px;
+}
+
+.postings {
+	margin-top: 25px;
+	width: 100%;
+	color: #4E4E54;
+	font-size: 14.5px;
+}
+
+.postings .fa-map-marker, .postings .fa-close {
+	color: #CCCCCC;
+	font-size: 16px;
+}
+
+.date {
+	font-size: 12px;
+}
+
+.posting-row:not(:first-of-type) {
+	margin-top: 20px;
+}
+
+.side-bar input[type=text] {
+	width: 85%;
+}
+
+.side-bar .fa-cog {
+	color: #808080;
+}
+
+.side-menu-container {
+	position: absolute;
+	right: 0;
+	padding: 30px 20px;
+}
+
+.side-menu {
+	color: #808080;
+}
+
+.side-menu:first-of-type {
+	color: #8D0ED8;
+}
+
+.side-menu:not(:first-of-type) {
+	margin-top: 18px;
+}
+
+input[type=checkbox]:focus {
+	background-color: #8D0ED8;
+}
+
+footer {
+	background-color: #DEDCE0;
+	height: 55px;
+}
+
+footer div, footer a {
+	display: inline-block;
+	color: black;
+}

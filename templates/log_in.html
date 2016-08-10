@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block content%}
+<div class="side-bar">
+	<div class="category">Accounting / Finance</div>
+	<form class="category-search">
+		<p class="search-name">Keyword</p>
+		<input type="text number" placeholder=" Accounting/Finance..." /><br>
+		<p class="search-name">Location</p>
+		<input type="text number" placeholder="Zip, city, state" />
+	</form>
+	<div class="search-btn-wrap">
+		<div class="btn btn-purple search-btn">Search</div>
+	</div>
+	<div class="filter-block">
+		<div>filters(optional):</div>
+		<form>
+			<div class="filter-title">Job type</div>
+			<input type="checkbox">   <span>Internship</span><br>
+			<input type="checkbox">   <span>Contract</span><br>
+			<input type="checkbox">   <span>Entry-level job</span><br>
+			<input type="checkbox">   <span>Mid-level job</span><br>
+			<input type="checkbox">   <span>Senior-level job</span><br>
+			<div class="filter-title">Job status</div>
+			<input type="checkbox">   <span>Full time</span><br>
+			<input type="checkbox">   <span>Part-time</span><br>
+			<div class="filter-title">Commute type</div>
+			<input type="checkbox">   <span>Commute</span><br>
+			<input type="checkbox">   <span>Remote</span><br>
+		</form>
+	</div>
+</div>
+<div class="main-container">
+	<p><span class="keyword-purple">{{ search_result.number }}</span> search results for "<span class="keyword-purple">{{ search_result.keyword }}</span>" near <span class="keyword-purple">{{ search_result.location }}</span></p>
+	<div class="page-sort-conatiner">
+		<div class="page-number-container">
+			<img src="../static/img/page-left.svg" />
+			<a class="page-number" href="/">1</a>
+			<a class="page-number" href="/">2</a>
+			<a class="page-number" href="/">3</a>
+			<a class="page-number" href="/">4</a>
+			<span>...</span>
+			<a class="page-number" href="/">10</a>
+			<img src="../static/img/page-right.svg" />
+			<img src="../static/img/page-far-right.svg" />
+		</div>
+		<div class="sort pull-right">
+			<div class="sort-by">Sort by:</div>
+			<div class="sort-category">closest to <span class="keyword-purple">{{ search_result.location }}</span>  <span class="fa fa-angle-down"></span> </div>
+		</div>
+	</div>
+	<div class="postings container">
+		{% for posting in posting_row %}
+		<div class="posting-row row">
+			<div class="col-sm-2">
+				<div class="fa fa-star-o keyword-light-purple"></div>
+				<span class="date">{{ posting.date }}</span>
+			</div>
+			<div class="col-sm-6">
+				<div>{{ posting.title }}</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="fa fa-map-marker"></div>
+				<span>{{ posting.location }}</span>
+			</div>
+			<div class="col-sm-1">
+				<div class="fa fa-close"></div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+<div style="clear:both;"></div>
+{% endblock %}

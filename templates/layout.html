@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Deviant Art</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../static/style/main.css" />
+	</head>
+
+	<body>
+		<div class="header">
+			<img src="../static/img/peace_sign.svg" class="logo pull-left" />
+			<div class="location">philadelphia  <span class="fa fa-angle-down"></span></div>
+			<div class="btn-wrap pull-right">
+				<a class="btn btn-white starred-post"><span class="fa fa-star"></span>  starred posts</a>
+				<a class="btn btn-purple sign-in">sign in / sign up</a>
+			</div>
+		</div>
+		<div class="menu-bar">
+			<a class="menu">Community</a>
+			<a class="menu">Relationship</a>
+			<a class="menu">Forums</a>
+			<a class="menu">Housing</a>
+			<a class="menu">For sale</a>
+			<a class="menu">Services</a>
+			<a class="menu highlighted">Jobs</a>
+			<a class="menu">Gigs</a>
+			<input class="search" type="text" name="search" placeholder="Search craigslist" /> 
+		</div>
+		{% block content %}
+		{% endblock %}
