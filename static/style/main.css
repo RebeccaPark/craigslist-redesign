@@ -322,12 +322,10 @@ html, body {
 }
 
 .sign-in-form {
-	margin-top: 50px;
-	display: inline-block;
+	margin: 50px auto;
 }
 
 .sign-in-container {
-	text-align: center;
 }
 
 .form-name {
