@@ -11,6 +11,12 @@ html, body {
 
 }
 
+.title {
+	text-align: center;
+	margin-top: 50px;
+	font-size: 20px;
+}
+
 .location {
 	position: relative;
 	display: inline-block;
@@ -38,6 +44,7 @@ html, body {
 	background-color: #8D0ED8;
 	color: white;
 	border-radius: 16.07px;
+	display: block;
 }
 
 .btn-wrap {
@@ -302,6 +309,32 @@ html, body {
 .side-menu:not(:first-of-type) {
 	margin-top: 18px;
 }
+
+.info-bar {
+	border-top: solid 1px #CCCCCC;
+	border-bottom: solid 1px #CCCCCC;
+	margin: 20px 0;
+	padding: 7px 0;
+}
+
+.info-bar .row div {
+	text-align: center;
+}
+
+.sign-in-form {
+	margin-top: 50px;
+	display: inline-block;
+}
+
+.sign-in-container {
+	text-align: center;
+}
+
+.form-name {
+	position: absolute;
+	display: block;
+}
+
 
 input[type=checkbox]:focus {
 	background-color: #8D0ED8;

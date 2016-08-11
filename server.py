@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, request
 
 app = Flask(__name__)
 
@@ -14,7 +14,25 @@ def index():
 
 @app.route("/account")
 def account():
-	return render_template("account.html")
+	posting_row = [
+		{
+			"date": "07/27",
+			"title": "Accounting Refund Clerk",
+			"location": "West Chester",
+			"category": "Jobs"	
+		},
+		{
+			"date": "07/26",
+			"title": "Entry Level Trader: Trade with Firm's Capital",
+			"location": "Philly/Remote",
+			"category": "Jobs"
+		}
+	]
+	return render_template("account.html", posting_row=posting_row)
+
+@app.route("/sign_in")
+def sign_in():
+	return render_template("sign_in.html")
 
 
 @app.route("/login")
@@ -82,11 +100,13 @@ def login():
 		}
 	]
 
+	keyword = request.args.get("keyword", "blah blah default")
 	search_result = {
 		"number": 132,
-		"keyword": "bookkeeping",
+		"keyword": keyword,
 		"location": 19106
 	}
+
 	return render_template("log_in.html", posting_row=posting_row, search_result=search_result)
 
 

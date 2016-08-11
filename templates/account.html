@@ -16,6 +16,33 @@
 			<div class="sort-category">All posts  <span class="fa fa-angle-down"></span> </div>
 			<div class="sort-category">All Categories  <span class="fa fa-angle-down"></span></div>
 		</div>
+	<div class="info-bar conatiner">
+		<div class="row">
+			<div class="col-sm-1"><div>Date</div></div>
+			<div class="col-sm-6"><div>Title</div></div>
+			<div class="col-sm-3"><div>Location</div></div>
+			<div class="col-sm-2"><div>Category</div></div>
+		</div>
+	</div>
+	<div class="postings container">
+		{% for posting in posting_row %}
+		<div class="posting-row row">
+			<div class="col-sm-1">
+				<span class="date">{{ posting.date }}</span>
+			</div>
+			<div class="col-sm-6">
+				<div>{{ posting.title }}</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="fa fa-map-marker"></div>
+				<span>{{ posting.location }}</span>
+			</div>
+			<div class="col-sm-2">
+				<div>{{ posting.category }}</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
 </div>
 <div style="clear:both;"></div>
 {% endblock %}
