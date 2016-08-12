@@ -1,16 +1,20 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="title">Welcome back to Craigslist!</div>
-<div class="sign-in-container">
-	<div class="sign-in-form">
-		<form>
-			<div class="form-name">Email</div>
-			<div><input type="text number" placeholder="ex) myemail@email.com"></div>
-			<div class="form-name">Password</div>
-			<div><input type="text number" placeholder="********"></div>
-		</form>
-		<a href="/">Forgot email/password?</a>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<form class='sign-in-form'>
+				<div>Email</div>
+				<input type="text number" placeholder="ex) myemail@email.com" />
+				<div>Password</div>
+				<input type="text number" placeholder="********" />
+				<a href="/">Forgot email/password?</a>
+			</form>
+			<button type="submit" class="sign-in-btn btn btn-purple">Sign in</button>
+		</div>
+		<div class="col-sm-4"></div>
 	</div>
-	<button type="submit" class="btn btn-purple">Sign in</button>
 </div>
 {% endblock %}

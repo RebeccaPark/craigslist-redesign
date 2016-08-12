@@ -122,7 +122,8 @@ html, body {
 
 .search:focus, 
 .search:active,
-.category-search input:focus {
+.category-search input:focus,
+.sign-in-form input:focus {
 	outline: none;
 	border-color: #8D0ED8;
 	outline-color: #8D0ED8;
@@ -322,17 +323,28 @@ html, body {
 }
 
 .sign-in-form {
-	margin: 50px auto;
+	margin: 60px auto;
 }
 
-.sign-in-container {
+.sign-in-form input {
+	color: #67676B;
+	border-radius: 2.9px;
+	border: solid 1px #707070;
+	width: 75%;
+	padding: 5px 6px;
 }
 
-.form-name {
-	position: absolute;
+.sign-in-form input:first-of-type {
+	margin-bottom: 20px;
+}
+
+.sign-in-form a {
 	display: block;
 }
 
+.sign-in-btn {
+	margin: 0 auto;
+}
 
 input[type=checkbox]:focus {
 	background-color: #8D0ED8;
