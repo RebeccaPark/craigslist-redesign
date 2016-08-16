@@ -5,9 +5,16 @@
 	<div class="category-search-container">
 		<form class="category-search" method="GET">
 			<p class="search-name">Keyword</p>
-			<input type="text number" name="keyword" placeholder=" Accounting/Finance..." /><br>
+			<input type="text number" name="keyword" placeholder=" Accounting/Finance..." />
 			<p class="search-name">Location</p>
 			<input type="text number" name="location" placeholder="Zip, city, state" />
+			<p class="search-name">Distance from location</p>
+			<select>
+				<option value="10">10 miles</option>
+				<option value="20">20 miles</option>
+				<option value="50">50 miles</option>
+				<option value="100">100 miles</option>
+			</select>
 			<div class="search-btn-wrap">
 				<button type="submit" class="btn btn-purple search-btn">Search</button>
 			</div>
@@ -51,6 +58,13 @@
 		</span>
 		{% endif %}
 	</p>
+	{% else %}
+	<p>
+		<span class="keyword-purple">
+			1142
+		</span>
+		search results in Accounting / Finance
+	</p>
 	{% endif %}
 	<div class="page-sort-conatiner">
 		<div class="page-number-container">
@@ -66,7 +80,11 @@
 		</div>
 		<div class="sort pull-right">
 			<div class="sort-by">Sort by:</div>
-			<div class="sort-category">closest to <span class="keyword-purple">{{ search_result.location }}</span>  <span class="fa fa-angle-down"></span> </div>
+			{% if location %}
+			<div class="sort-category">closest to<span class="keyword-purple angle-next">{{ search_result.location }}</span>  <span class="angle-next fa fa-angle-down"></span> </div>
+			{% else %}
+			<div class="sort-category">Newest<span class="angle-next fa fa-angle-down"></span> </div>
+			{% endif %}
 		</div>
 	</div>
 	<div class="postings container">

@@ -313,6 +313,10 @@ html, body {
 	color: #808080;
 }
 
+.side-menu:hover {
+	color: #8D0ED8;
+}
+
 .side-menu:first-of-type {
 	color: #8D0ED8;
 }
@@ -396,6 +400,20 @@ html, body {
 
 .angle-next {
 	margin-left: 2px;
+}
+
+.category-search select {
+	width: 80%;
+	height: 24px;
+	font-size: 12px;
+	border-radius: 0;
+	background-color: white;
+	font-color: #8D8D8D;
+}
+
+.category-search select:focus {
+	outline: none;
+	border-color: #8D0ED8;
 }
 
 input[type=checkbox]:focus {
