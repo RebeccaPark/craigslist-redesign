@@ -45,17 +45,20 @@ def login():
 		{
 			"date": "07/27",
 			"title": "Accounting Refund Clerk",
-			"location": "Center City"
+			"location": "Center City",
+			"compensation": "$20/hr"
 		},
 		{
 			"date": "07/27",
 			"title": "Business Analyst",
-			"location": "Center City"
+			"location": "Center City",
+			"compensation": "100k/yr"
 		},
 		{
 			"date": "07/27",
 			"title": "Part-time Bookkeeper",
-			"location": "University City"
+			"location": "University City",
+			"compensation": "Negotiable"
 		},
 		{
 			"date": "07/27",

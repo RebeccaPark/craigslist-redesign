@@ -10,6 +10,7 @@
 			<input type="text number" name="location" placeholder="Zip, city, state" />
 			<p class="search-name">Distance from location</p>
 			<select>
+				<option value="not-specificed">Not specified</option>
 				<option value="10">10 miles</option>
 				<option value="20">20 miles</option>
 				<option value="50">50 miles</option>
@@ -94,10 +95,13 @@
 				<div class="fa fa-star-o keyword-light-purple"></div>
 				<span class="date">{{ posting.date }}</span>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-5">
 				<div>{{ posting.title }}</div>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-sm-2">
+				<div>{{ posting.compensation }}</div>
+			</div>
+			<div class="col-sm-2">
 				<div class="fa fa-map-marker"></div>
 				<span>{{ posting.location }}</span>
 			</div>
