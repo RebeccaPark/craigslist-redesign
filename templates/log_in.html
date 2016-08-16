@@ -7,7 +7,7 @@
 			<p class="search-name">Keyword</p>
 			<input type="text number" name="keyword" placeholder=" Accounting/Finance..." /><br>
 			<p class="search-name">Location</p>
-			<input type="text number" placeholder="Zip, city, state" />
+			<input type="text number" name="location" placeholder="Zip, city, state" />
 			<div class="search-btn-wrap">
 				<button type="submit" class="btn btn-purple search-btn">Search</button>
 			</div>
@@ -32,7 +32,26 @@
 	</div>
 </div>
 <div class="main-container">
-	<p><span class="keyword-purple">{{ search_result.number }}</span> search results for "<span class="keyword-purple">{{ search_result.keyword }}</span>" near <span class="keyword-purple">{{ search_result.location }}</span></p>
+	{% if keyword or location%}
+	<p>
+		<span class="keyword-purple">
+			{{ search_result.number }}
+		</span> 
+		search results 
+		{% if keyword %}
+		for "
+		<span class="keyword-purple">
+			{{ search_result.keyword }}
+		</span>"
+		{% endif %} 
+		{% if location %}
+		near
+		<span class="keyword-purple">
+			{{ search_result.location }}
+		</span>
+		{% endif %}
+	</p>
+	{% endif %}
 	<div class="page-sort-conatiner">
 		<div class="page-number-container">
 			<img src="../static/img/page-left.svg" />

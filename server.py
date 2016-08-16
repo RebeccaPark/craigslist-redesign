@@ -104,14 +104,17 @@ def login():
 		}
 	]
 
-	keyword = request.args.get("keyword", "blah blah default")
+	keyword = request.args.get("keyword", "")
+
+	location = request.args.get("location", "")
+
 	search_result = {
 		"number": 132,
 		"keyword": keyword,
-		"location": 19106
+		"location": location
 	}
 
-	return render_template("log_in.html", posting_row=posting_row, search_result=search_result)
+	return render_template("log_in.html", posting_row=posting_row, search_result=search_result, keyword=keyword, location=location)
 
 
 if __name__ == "__main__":
