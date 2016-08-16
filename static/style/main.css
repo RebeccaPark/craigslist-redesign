@@ -210,7 +210,7 @@ html, body {
 }
 
 .main-container {
-	padding: 40px 25px;
+	padding: 40px 40px;
 	float: left;
 	width: 80%;
 }
@@ -274,6 +274,8 @@ html, body {
 .postings .fa-star-o {
 	font-size: 16px;
 	margin-right: 5px;
+	position: absolute;
+	left: 0px;
 }
 
 .postings {
@@ -281,6 +283,8 @@ html, body {
 	width: 100%;
 	color: #4E4E54;
 	font-size: 14.5px;
+	position: relative;
+
 }
 
 .postings .fa-map-marker, .postings .fa-close {
@@ -414,6 +418,10 @@ html, body {
 .category-search select:focus {
 	outline: none;
 	border-color: #8D0ED8;
+}
+
+.right {
+	text-align: right;
 }
 
 input[type=checkbox]:focus {

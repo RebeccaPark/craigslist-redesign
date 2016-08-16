@@ -39,7 +39,7 @@
 		</form>
 	</div>
 </div>
-<div class="main-container">
+<div class="main-container container">
 	{% if keyword or location%}
 	<p>
 		<span class="keyword-purple">
@@ -88,14 +88,14 @@
 			{% endif %}
 		</div>
 	</div>
-	<div class="postings container">
+	<div class="postings">
 		{% for posting in posting_row %}
 		<div class="posting-row row">
-			<div class="col-sm-2">
-				<div class="fa fa-star-o keyword-light-purple"></div>
+			<div class="fa fa-star-o keyword-light-purple"></div>
+			<div class="col-sm-1 right">
 				<span class="date">{{ posting.date }}</span>
 			</div>
-			<div class="col-sm-5">
+			<div class="col-sm-6">
 				<div>{{ posting.title }}</div>
 			</div>
 			<div class="col-sm-2">
@@ -105,9 +105,7 @@
 				<div class="fa fa-map-marker"></div>
 				<span>{{ posting.location }}</span>
 			</div>
-			<div class="col-sm-1">
-				<div class="fa fa-close"></div>
-			</div>
+			<div class="col-sm-1 fa fa-close" style="text-align:right;"></div>
 		</div>
 		{% endfor %}
 	</div>
