@@ -2,15 +2,17 @@
 {% block content%}
 <div class="side-bar">
 	<div class="category">Accounting / Finance</div>
-	<form class="category-search" method="GET">
-		<p class="search-name">Keyword</p>
-		<input type="text number" name="keyword" placeholder=" Accounting/Finance..." /><br>
-		<p class="search-name">Location</p>
-		<input type="text number" placeholder="Zip, city, state" />
-		<div class="search-btn-wrap">
-			<button type="submit" class="btn btn-purple search-btn">Search</button>
-		</div>
-	</form>
+	<div class="category-search-container">
+		<form class="category-search" method="GET">
+			<p class="search-name">Keyword</p>
+			<input type="text number" name="keyword" placeholder=" Accounting/Finance..." /><br>
+			<p class="search-name">Location</p>
+			<input type="text number" placeholder="Zip, city, state" />
+			<div class="search-btn-wrap">
+				<button type="submit" class="btn btn-purple search-btn">Search</button>
+			</div>
+		</form>
+	</div>
 	<div class="filter-block">
 		<div>filters(optional):</div>
 		<form>

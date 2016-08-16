@@ -8,19 +8,15 @@ html, body {
 	height: 55px;
 	text-align: center;
 	line-height: 55px;
-
 }
 
 .title {
 	text-align: center;
-	margin-top: 50px;
-	font-size: 20px;
+	margin-top: 100px;
+	font-size: 23px;
 }
 
 .location {
-	position: relative;
-	display: inline-block;
-	left: 100px;
 	color: #4E4E54;
 	font-size: 15px;
 	line-height: 55px;
@@ -34,8 +30,13 @@ html, body {
 	line-height: 55px;
 }
 
+.container {
+	max-width: 100%;
+}
+
 .btn-white {
 	color: #8D0ED8;
+	background-color: white;
 	border-color: #8D0ED8;
 	border-radius: 16.07px;
 }
@@ -44,16 +45,19 @@ html, body {
 	background-color: #8D0ED8;
 	color: white;
 	border-radius: 16.07px;
-	display: block;
 }
 
 .btn-wrap {
+	position: absolute;
 	display: inline-block;
+	right: 0;
+	top: 0;
 	height: 55px;
 	margin-right: 20px;
 }
 
 .sign-in {
+	margin-left: 10px;
 	font-size: 13px;
 	vertical-align: center;
 }
@@ -115,7 +119,7 @@ html, body {
 	border-radius: 2.9px;
 	border: solid 1px #707070;
 	background-image: url('../img/search.svg');
-	background-position: 117px 6px;
+	background-position: 110px 7px;
 	background-repeat: no-repeat;
 	background-size: 12px 12px;
 }
@@ -144,25 +148,32 @@ html, body {
 }
 
 .category-search {
+	padding-left: 15px;
 	margin: 20px 0;
+}
+
+.category-search-container {
 }
 
 .search-name {
 	color: #4E4E54;
-	margin-top: 10px;
-	margin-bottom: 2px;	
+	margin-top: 15px;
+	margin-bottom: 5px;	
 	font-size: 12px;
 }
 
 .category-search input {
-	padding: 4px 5px;
+	padding: 5px 6px;
+	/*padding: 4px 5px;*/
 	font-size: 12px;
 	color: #67676B;
 	border-radius: 2.9px;
 	border: solid 1.5px #707070;
+	width: 80%;
 }
 
 .search-btn-wrap {
+	margin-top: 23px;
 	text-align: center;
 }
 
@@ -199,7 +210,7 @@ html, body {
 }
 
 .main-container {
-	padding: 30px 40px;
+	padding: 50px 40px;
 	float: left;
 	width: 80%;
 }
@@ -294,9 +305,8 @@ html, body {
 }
 
 .side-menu-container {
-	position: absolute;
-	right: 0;
-	padding: 30px 20px;
+	text-align: right;
+	padding: 60px 10px;
 }
 
 .side-menu {
@@ -314,7 +324,7 @@ html, body {
 .info-bar {
 	border-top: solid 1px #CCCCCC;
 	border-bottom: solid 1px #CCCCCC;
-	margin: 20px 0;
+	margin: 40px 0;
 	padding: 7px 0;
 }
 
@@ -322,15 +332,25 @@ html, body {
 	text-align: center;
 }
 
+.sign-in-container {
+	text-align: center;
+}
+
 .sign-in-form {
-	margin: 60px auto;
+	margin-top: 45px;
+	display: inline-block;
+	text-align: left;
+}
+
+.sign-in-form button {
+	display: block;
 }
 
 .sign-in-form input {
 	color: #67676B;
 	border-radius: 2.9px;
 	border: solid 1px #707070;
-	width: 75%;
+	width: 230px;
 	padding: 5px 6px;
 }
 
@@ -340,10 +360,36 @@ html, body {
 
 .sign-in-form a {
 	display: block;
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+.sign-in-form button {
+	margin-top: 35px;	
+	padding: 5px 20px;
 }
 
 .sign-in-btn {
 	margin: 0 auto;
+}
+
+.user {
+	margin-right: 8px;
+	margin-left: 20px;
+	font-size: 16px;
+	color: #4E4E54;
+}
+
+.new-post {
+	margin-left: 15px;
+}
+
+.center {
+	text-align: center;
+}
+
+.not-in-line {
+	display: block;
 }
 
 input[type=checkbox]:focus {

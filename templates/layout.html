@@ -2,7 +2,7 @@
 <html>
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Deviant Art</title>
+	<title>Craigslist</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="../static/style/main.css" />
@@ -10,11 +10,18 @@
 
 	<body>
 		<div class="header">
-			<img src="../static/img/peace_sign.svg" class="logo pull-left" />
-			<div class="location">philadelphia  <span class="fa fa-angle-down"></span></div>
-			<div class="btn-wrap pull-right">
-				<a class="btn btn-white starred-post"><span class="fa fa-star"></span>  starred posts</a>
-				<a class="btn btn-purple sign-in">sign in / sign up</a>
+			<img src="../static/img/peace_sign.svg" class="logo" />
+			<div class="location">philadelphia<span class="fa fa-angle-down"></span></div>
+			<div class="btn-wrap">
+				<button class="btn btn-white starred-post"><span class="fa fa-star"></span>starred posts</button>
+				{% if signed_in %}
+				<button class="btn btn-purple sign-in">New post</button>
+				<div class="fa fa-user user">
+					<div class="fa fa-angle-down"></div>
+				</div>
+				{% else %}
+				<button class="btn btn-purple sign-in">sign in / sign up</button>
+				{% endif %}
 			</div>
 		</div>
 		<div class="menu-bar">
@@ -30,3 +37,5 @@
 		</div>
 		{% block content %}
 		{% endblock %}
+	</body>
+</html>

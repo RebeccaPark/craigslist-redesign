@@ -1,48 +1,57 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="side-bar">
-	<div class="category">burugirl93@gmail.com  <span class="fa fa-cog"></span></div>	
-	<div class="side-menu-container">
-		<div class="side-menu">Postings</div>
-		<div class="side-menu">Drafts</div>
-		<div class="side-menu">Searches</div>
-		<div class="side-menu">Biling</div>
+<div class="clearfix">
+	<div class="side-bar">
+		<div class="category">burugirl93@gmail.com  <span class="fa fa-cog"></span></div>	
+		<div class="side-menu-container">
+			<div class="side-menu">Postings</div>
+			<div class="side-menu">Drafts</div>
+			<div class="side-menu">Searches</div>
+			<div class="side-menu">Biling</div>
+		</div>
+	</div>
+	<div class="main-container clearfix">
+		<div class="container">
+			<div><button class="btn btn-purple new-post">New post</button></div>
+			<div class="sort pull-right not-in-line">
+					<div class="sort-by">Sort by:</div>
+					<div class="sort-category">
+						All posts
+						<span class="fa fa-angle-down"></span>
+					</div>
+					<div class="sort-category">
+						All Categories
+						<span class="fa fa-angle-down"></span>
+					</div>
+			</div>
+			<div class="info-bar">
+				<div class="row">
+					<div class="col-sm-1">Date</div>
+					<div class="col-sm-7">Title</div>
+					<div class="col-sm-2">Location</div>
+					<div class="col-sm-2">category</div>
+				</div>
+			</div>
+			<div class="postings">
+				{% for posting in posting_row %}
+				<div class="posting-row row">
+					<div class="col-sm-1 center">
+						<span class="date">{{ posting.date }}</span>
+					</div>
+					<div class="col-sm-7">
+						<div>{{ posting.title }}</div>
+					</div>
+					<div class="col-sm-2 center">
+						<div class="fa fa-map-marker"></div>
+						<span>{{ posting.location }}</span>
+					</div>
+					<div class="col-sm-2 center">
+						<div>{{ posting.category }}</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
 	</div>
 </div>
-<div class="main-container">
-	<div class="btn btn-purple">New post</div>
-	<div class="sort pull-right">
-			<div class="sort-by">Sort by:</div>
-			<div class="sort-category">All posts  <span class="fa fa-angle-down"></span> </div>
-			<div class="sort-category">All Categories  <span class="fa fa-angle-down"></span></div>
-		</div>
-	<div class="info-bar conatiner">
-		<div class="row">
-			<div class="col-sm-1"><div>Date</div></div>
-			<div class="col-sm-6"><div>Title</div></div>
-			<div class="col-sm-3"><div>Location</div></div>
-			<div class="col-sm-2"><div>Category</div></div>
-		</div>
-	</div>
-	<div class="postings container">
-		{% for posting in posting_row %}
-		<div class="posting-row row">
-			<div class="col-sm-1">
-				<span class="date">{{ posting.date }}</span>
-			</div>
-			<div class="col-sm-6">
-				<div>{{ posting.title }}</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="fa fa-map-marker"></div>
-				<span>{{ posting.location }}</span>
-			</div>
-			<div class="col-sm-2">
-				<div>{{ posting.category }}</div>
-			</div>
-		</div>
-		{% endfor %}
-	</div>
-</div>
-<div style="clear:both;"></div>
 {% endblock %}

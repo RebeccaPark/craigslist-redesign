@@ -1,20 +1,19 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="title">Welcome back to Craigslist!</div>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-4"></div>
-		<div class="col-sm-4">
-			<form class='sign-in-form'>
-				<div>Email</div>
-				<input type="text number" placeholder="ex) myemail@email.com" />
-				<div>Password</div>
-				<input type="text number" placeholder="********" />
-				<a href="/">Forgot email/password?</a>
-			</form>
+<div class="title">Sign in</div>
+<div class="sign-in-container">
+	<div class="sign-in-form">
+		<form method="POST">
+			<div>Email</div>
+			<input type="text number" placeholder="ex) myemail@email.com" />
+			<div>Password</div>
+			<input type="text number" placeholder="********" />
+			<a href="/">Forgot email/password?</a>
 			<button type="submit" class="sign-in-btn btn btn-purple">Sign in</button>
-		</div>
-		<div class="col-sm-4"></div>
+			{% if error %}
+			<p class="alert alert-warning">{{error}}</p>
+			{% endif %}
+		</form>
 	</div>
 </div>
 {% endblock %}
