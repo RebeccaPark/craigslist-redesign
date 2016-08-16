@@ -11,9 +11,12 @@
 	<body>
 		<div class="header">
 			<img src="../static/img/peace_sign.svg" class="logo" />
-			<div class="location">philadelphia<span class="fa fa-angle-down"></span></div>
+			<div class="location">philadelphia<span class="angle-next fa fa-angle-down"></span></div>
 			<div class="btn-wrap">
-				<button class="btn btn-white starred-post"><span class="fa fa-star"></span>starred posts</button>
+				<button class="btn btn-white starred-post">
+					<span class="fa fa-star"></span>
+					starred posts
+				</button>
 				{% if signed_in %}
 				<button class="btn btn-purple sign-in">New post</button>
 				<div class="fa fa-user user">
@@ -31,7 +34,11 @@
 			<a class="menu">Housing</a>
 			<a class="menu">For sale</a>
 			<a class="menu">Services</a>
+			{% if category_not_selected %}
+			<a class="menu">Jobs</a>
+			{% else %}
 			<a class="menu highlighted">Jobs</a>
+			{% endif %}
 			<a class="menu">Gigs</a>
 			<input class="search" type="text" name="search" placeholder="Search craigslist" /> 
 		</div>

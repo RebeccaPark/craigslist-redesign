@@ -210,7 +210,7 @@ html, body {
 }
 
 .main-container {
-	padding: 50px 40px;
+	padding: 40px 25px;
 	float: left;
 	width: 80%;
 }
@@ -264,7 +264,7 @@ html, body {
 	border: solid 1px #CCCCCC;
 	padding: 5px 10px;
 	display: inline-block;
-	font-size: 13px;
+	font-size: 11px;
 }
 
 .sort-category:not(:first-of-type) {
@@ -324,8 +324,10 @@ html, body {
 .info-bar {
 	border-top: solid 1px #CCCCCC;
 	border-bottom: solid 1px #CCCCCC;
-	margin: 40px 0;
+	margin-top: 40px;
+	margin-bottom: 10px;
 	padding: 7px 0;
+	font-size: 13px;
 }
 
 .info-bar .row div {
@@ -381,7 +383,7 @@ html, body {
 }
 
 .new-post {
-	margin-left: 15px;
+	margin-left: 0;
 }
 
 .center {
@@ -390,6 +392,10 @@ html, body {
 
 .not-in-line {
 	display: block;
+}
+
+.angle-next {
+	margin-left: 2px;
 }
 
 input[type=checkbox]:focus {

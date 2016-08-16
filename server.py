@@ -28,7 +28,7 @@ def account():
 			"category": "Jobs"
 		}
 	]
-	return render_template("account.html", posting_row=posting_row, signed_in=True)
+	return render_template("account.html", posting_row=posting_row, signed_in=True, category_not_selected=True)
 
 @app.route("/sign_in", methods=["GET", "POST"])
 def sign_in():
@@ -36,7 +36,7 @@ def sign_in():
 	if request.method == "POST":
 		error = "Unable to log in at this time."
 
-	return render_template("sign_in.html", error=error)
+	return render_template("sign_in.html", error=error, category_not_selected=True)
 
 
 @app.route("/login")
