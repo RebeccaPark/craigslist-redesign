@@ -5,7 +5,7 @@
 	<div class="category-search-container">
 		<form class="category-search" method="GET">
 			<p class="search-name">Keyword</p>
-			<input type="text number" name="keyword" placeholder=" Accounting/Finance..." />
+			<input type="text number" name="keyword" placeholder=" Accounting/Finance..." value="" />
 			<p class="search-name">Location</p>
 			<input type="text number" name="location" placeholder="Zip, city, state" />
 			<p class="search-name">Distance from location</p>
@@ -67,17 +67,17 @@
 		search results in Accounting / Finance
 	</p>
 	{% endif %}
-	<div class="page-sort-conatiner">
+	<div class="page-sort-conatiner clearfix">
 		<div class="page-number-container">
-			<img src="../static/img/page-left.svg" />
+			<img src="/static/img/page-left.svg" />
 			<a class="page-number" href="/">1</a>
 			<a class="page-number" href="/">2</a>
 			<a class="page-number" href="/">3</a>
 			<a class="page-number" href="/">4</a>
 			<span>...</span>
 			<a class="page-number" href="/">10</a>
-			<img src="../static/img/page-right.svg" />
-			<img src="../static/img/page-far-right.svg" />
+			<img src="/static/img/page-right.svg" />
+			<img src="/static/img/page-far-right.svg" />
 		</div>
 		<div class="sort pull-right">
 			<div class="sort-by">Sort by:</div>
@@ -88,27 +88,40 @@
 			{% endif %}
 		</div>
 	</div>
+	<div class="info-bar">
+			<div class="posting-row row">
+				<div class="col-sm-2">Date</div>
+				<div class="col-sm-5 center">Title</div>
+				<div class="col-sm-2 center">Compensation</div>
+				<div class="col-sm-2 center">Location</div>
+				<div class="col-sm-1 center">Discard</div>
+			</div>
+		</div>
 	<div class="postings">
 		{% for posting in posting_row %}
 		<div class="posting-row row">
-			<div class="fa fa-star-o keyword-light-purple"></div>
-			<div class="col-sm-1 right">
-				<span class="date">{{ posting.date }}</span>
-			</div>
-			<div class="col-sm-6">
-				<div>{{ posting.title }}</div>
-			</div>
 			<div class="col-sm-2">
+				<div class="fa fa-star-o keyword-light-purple"></div>
+				<span class="date center">{{ posting.date }}</span>
+			</div>
+			<a href="/" class="col-sm-5 posting-title">
+				<div>{{ posting.title }}</div>
+			</a>
+			<div class="col-sm-2 center">
 				<div>{{ posting.compensation }}</div>
 			</div>
 			<div class="col-sm-2">
 				<div class="fa fa-map-marker"></div>
 				<span>{{ posting.location }}</span>
 			</div>
-			<div class="col-sm-1 fa fa-close" style="text-align:right;"></div>
+			<div class="col-sm-1 fa fa-close center"></div>
 		</div>
 		{% endfor %}
 	</div>
 </div>
-<div style="clear:both;"></div>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="/static/scripts/login.js"></script>
 {% endblock %}

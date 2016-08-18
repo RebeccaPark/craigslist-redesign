@@ -52,7 +52,7 @@ def login():
 			"date": "07/27",
 			"title": "Business Analyst",
 			"location": "Center City",
-			"compensation": "100k/yr"
+			"compensation": "$100k/yr"
 		},
 		{
 			"date": "07/27",
@@ -68,42 +68,50 @@ def login():
 		{
 			"date": "07/26",
 			"title": "Part Time Accounting/Tax Filing",
-			"location": "University City"
+			"location": "University City",
+			"compensation": "$40/hr"
 		},
 		{
 			"date": "07/26",
 			"title": "Entry Level Trader: Trade with Firm's Capital",
-			"location": "Philly/Remote"
+			"location": "Philly/Remote",
+			"compensation": "Negotiable"
 		},
 		{
 			"date": "07/26",
 			"title": "Compliance Associate",
-			"location": "Philadelphia"
+			"location": "Philadelphia",
+			"compensation": "Negotiable"
 		},
 		{
 			"date": "07/26",
 			"title": "Financial Coordinator",
-			"location": "Philadelphia"
+			"location": "Philadelphia",
+			"compensation": "$20/hr"
 		},
 		{
 			"date": "07/25",
 			"title": "Accounting Technical Lead",
-			"location": "Philadelphia"
+			"location": "Philadelphia",
+			"compensation": "$70k/yr"
 		},
 		{
 			"date": "07/25",
 			"title": "Tax Preaparer",
-			"location": "Conshohocken"
+			"location": "Conshohocken",
+			"compensation": "Negotiable"
 		},
 		{
 			"date": "07/24",
 			"title": "Finance Director",
-			"location": "Malvern"
+			"location": "Malvern",
+			"compensation": "Negotiable"
 		},
 		{
 			"date": "07/24",
 			"title": "Senior Accountant",
-			"location": "Paoli"
+			"location": "Paoli",
+			"compensation": "$50/hr"
 		}
 	]
 

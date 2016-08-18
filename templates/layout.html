@@ -5,17 +5,17 @@
 	<title>Craigslist</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="../static/style/main.css" />
+	<link rel="stylesheet" href="/static/style/main.css" />
 	</head>
 
 	<body>
 		<div class="header">
-			<img src="../static/img/peace_sign.svg" class="logo" />
+			<img src="/static/img/peace_sign.svg" class="logo" />
 			<div class="location">philadelphia<span class="angle-next fa fa-angle-down"></span></div>
 			<div class="btn-wrap">
 				<button class="btn btn-white starred-post">
 					<span class="fa fa-star"></span>
-					starred posts
+					<span id="num-star"></span> starred posts
 				</button>
 				{% if signed_in %}
 				<button class="btn btn-purple sign-in">New post</button>
@@ -43,6 +43,10 @@
 			<input class="search" type="text" name="search" placeholder="Search craigslist" /> 
 		</div>
 		{% block content %}
+		{% endblock %}
+
+		{% block scripts %}
+		<script src="/static/scripts/login.js"></script>
 		{% endblock %}
 	</body>
 </html>
