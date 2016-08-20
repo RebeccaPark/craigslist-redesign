@@ -12,18 +12,31 @@
 		<div class="header">
 			<img src="/static/img/peace_sign.svg" class="logo" />
 			<div class="location">philadelphia<span class="angle-next fa fa-angle-down"></span></div>
+			<div class="user-drop-down hidden">
+				<div class="line-height-55 clearfix">
+					<div class="fa fa-user pull-right drop-down-user" style="margin-right: 0px; line-height: 40px; font-size: 16px;">
+						<div class="fa fa-angle-down"></div>
+					</div>
+				</div>
+				<div class="drop-menu">Starred posts</div>
+				<div class="drop-menu">Activities</div>
+				<div class="drop-menu">Settings</div>
+			</div>
 			<div class="btn-wrap">
 				<button class="btn btn-white starred-post">
 					<span class="fa fa-star"></span>
 					<span id="num-star"></span> starred posts
 				</button>
 				{% if signed_in %}
-				<button class="btn btn-purple sign-in">New post</button>
+				<button class="btn btn-purple sign-in new-post-header">New post</button>
 				<div class="fa fa-user user">
 					<div class="fa fa-angle-down"></div>
 				</div>
 				{% else %}
-				<button class="btn btn-purple sign-in">sign in / sign up</button>
+				<a class="btn-link" href="http://localhost:9090/sign_in">
+					<button class="btn btn-purple sign-in">sign in / sign up
+					</button>
+				</a>
 				{% endif %}
 			</div>
 		</div>

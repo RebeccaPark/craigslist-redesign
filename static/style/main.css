@@ -5,6 +5,7 @@ html, body {
 }
 
 .header {
+	position: relative;
 	height: 55px;
 	text-align: center;
 	line-height: 55px;
@@ -231,7 +232,6 @@ html, body {
 	margin-top: 30px;
 	margin-right: 30px;
 	width: 100%;
-	padding-bottom: 8px;
 	/*border-bottom: solid 1px #CCCCCC;*/
 }
 
@@ -239,6 +239,37 @@ html, body {
 	display: inline-block;
 	vertical-align: bottom;
 	line-height: 30px;
+}
+
+.user-drop-down {
+	position: absolute;
+	right: 14px;
+	top: 5px;
+	z-index: 1000;
+	font-size: 13px;
+	line-height: initial;
+	text-align: left;
+	background-color: white;
+	padding-bottom: 7px;
+	padding-right: 12px;
+	padding-left: 12px;
+	border-right: solid 2px #CCCCCC;
+	border-left: solid 2px #CCCCCC;
+	border-bottom: solid 2px #CCCCCC;
+	border-top: solid 2px #CCCCCC;
+	color: #4E4E54;
+}
+
+.line-height-55 {
+	line-height: 55px;
+}
+
+.user-drop-down .fa-user {
+	margin-right: 8px;
+	font-size: 16px;
+}
+.drop-menu:not(:first-of-type) {
+	margin-top: 8px;
 }
 
 .page-number-container img {
@@ -282,7 +313,7 @@ html, body {
 }
 
 .postings {
-	margin-top: 25px;
+	margin-top: 10px;
 	width: 100%;
 	color: #4E4E54;
 	font-size: 14.5px;
@@ -293,6 +324,7 @@ html, body {
 .postings .fa-map-marker, .postings .fa-close {
 	color: #CCCCCC;
 	font-size: 16px;
+	line-height: 40px;
 }
 
 .date {
@@ -306,10 +338,7 @@ html, body {
 .posting-row {
 	width: 100%;
 	margin: 0;
-}
-
-.posting-row:not(:first-of-type) {
-	margin-top: 20px;
+	line-height: 40px;
 }
 
 .posting-title {
@@ -352,6 +381,20 @@ html, body {
 	margin-bottom: 10px;
 	padding: 7px 0;
 	font-size: 13px;
+	width: 100%;
+}
+
+.margin-top {
+	margin-top: 25px;
+}
+
+.date-category {
+	padding-left: 40px;
+}
+
+.full-width {
+	width: 100%;
+	margin: 0;
 }
 
 .sign-in-container {
@@ -406,12 +449,12 @@ html, body {
 	margin-left: 0;
 }
 
-.center {
-	text-align: center;
+.new-post-header {
+	margin-right: 40px;
 }
 
-.not-in-line {
-	display: block;
+.center {
+	text-align: center;
 }
 
 .angle-next {
