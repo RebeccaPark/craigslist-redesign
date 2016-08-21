@@ -260,14 +260,21 @@ html, body {
 	color: #4E4E54;
 }
 
+.drop-down-user {
+	margin-right: 0px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #8D0ED8;
+}
+
 .line-height-55 {
 	line-height: 55px;
 }
 
-.user-drop-down .fa-user {
-	margin-right: 8px;
-	font-size: 16px;
+.drop-menu:hover {
+	color: #8D0ED8;
 }
+
 .drop-menu:not(:first-of-type) {
 	margin-top: 8px;
 }
